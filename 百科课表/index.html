@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="charset=utf-8" />
+    <meta content="width=device-width initial-scale=0.5 minimum-scale=0.5 maximum-scale=10.0 user-scalable=yes target-densitydpi=device-dpi" name="viewport" />
+    <title>商大百科</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<div id="time">
+    <div id="dial"></div>
+    <div id="hand">
+        <div id="hour"><span></span></div>
+        <div id="min"><span></span></div>
+        <div id="sec"><span></span></div>
+        <div id="center"></div>
+    </div>
+    <div class="gradient"></div>
+</div>
+    <div id="lession">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <thead>
+                <tr id="day">
+                    <th height="28" width="70">&nbsp;</th>
+                    <th height='28' width='123'>星期一</th>
+                    <th height='28' width='123'>星期二</th>
+                    <th height='28' width='123'>星期三</th>
+                    <th height='28' width='123'>星期四</th>
+                    <th height='28' width='123'>星期五</th>
+                    <th height='28' width='123'>星期六</th>
+                    <th height='28' width='123'>星期日</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--后端循环-->
+                <tr>
+                    <th height="28" width="70">&nbsp;</th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                </tr>
+                <tr>
+                    <th height="28" width="70">&nbsp;</th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                </tr>
+                <tr>
+                    <th height="28" width="70">&nbsp;</th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                </tr>
+                <tr>
+                    <th height="28" width="70">&nbsp;</th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                    <th height='28' width='123'></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="tips">备注:</div>
+    <script type="text/javascript">
+        window.onload=function(){
+            var oDial=document.getElementById('dial');
+            var oHour=document.getElementById('hour');
+            var oMin=document.getElementById('min');
+            var oSec=document.getElementById('sec');
+            
+            toDial(oDial);
+            toTime(oHour,oMin,oSec);
+            setInterval(function(){
+                toTime(oHour,oMin,oSec);
+            },1000)
+        }
+
+        function toTime(oHour,oMin,oSec){
+            var oDate=new Date();
+            var iSec=oDate.getSeconds();
+            var iMin=oDate.getMinutes()+iSec/60;
+            var iHour=(oDate.getHours()%12)+iMin/60;
+            oSec.style.webkitTransform="rotate("+(iSec*360/60)+"deg)";
+            oMin.style.webkitTransform="rotate("+(iMin*360/60)+"deg)";
+            oHour.style.webkitTransform="rotate("+(iHour*360/12)+"deg)";
+            oSec.style.MozTransform="rotate("+(iSec*360/60)+"deg)";
+            oMin.style.MozTransform="rotate("+(iMin*360/60)+"deg)";
+            oHour.style.MozTransform="rotate("+(iHour*360/12)+"deg)";  
+        }
+
+        function toDial(obj){
+            var sHtml="";
+            var iDeg=6;
+            for(var i=0;i<60;i++){
+                sHtml+="<span style='-webkit-transform:rotate("+iDeg*i+"deg)'></span>";
+                sHtml+="<span style='-moz-transform:rotate("+iDeg*i+"deg)'></span>"; 
+            }
+            obj.innerHTML=sHtml;
+        }   
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* reset */
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,label,input,article,header,hgroup,section,a{margin:0;padding:0;border:none;font-size:100%;font-family: "Microsoft YaHei UI",Helvetica,sans-serif;;vertical-align:baseline;}
+a,label,input,article,header,hgroup,section {display: block;}
+html,body{height: 100%;}
+a{text-decoration:none;}
+.clear{clear:both;}
+
+/* banner */
+.banner {background: url(../images/banner.jpg) no-repeat;background-size: cover;}
+.banner-top {padding: 1em;background-color: rgba(187, 221, 204, .28);}
+
+/* banner-text */
+.banner-text {padding: 2em 1em 2em 2em;}
+.banner-text h1 {font-size: 1.6em;color: #fff;margin-top: .9em;}
+.banner-text h2 {font-size: 1em;color: #fff;margin: 1.25em 0 1em 0;}
+
+/* banner-bottom */
+.sdbk-community {display: flex;}
+.sdbk-community-left, .sdbk-community-right {width: 50%;text-align: center;padding:1.8em 0;background-color: #56aa9a;}
+.sdbk-community h2 {font-size: 1.0em;color: #fff;}
+.sdbk-community p {font-size: .6em;color: #fff;font-weight: 500;margin-top: 1.5em;}
+
+/* work-text */
+.subject {padding: 3.5em 1.5em 1.5em; background-color: #fff;}
+.subject h2 {font-size: 1.8em;color: #66CDAA;font-weight: 600;margin-bottom: .6em;}
+
+/* tabs */
+.subject-list div {margin: .2em 0}
+.subject-list span:first-of-type { display: inline-block;width: 150px; }
+.subject-list input {display: none;}
+.subject-list input:checked + label {color: #66CDAA;}
+.subject-list label i {display: inline-block;width: 13px;height: 13px;margin: .25em 1em 0 0;border-radius: 50%;background-color: #abbbbb;font-size: 1em;vertical-align: text-top;}
+.subject-list label {position: relative;z-index: 20;padding: 8px 20px 8px 0;cursor: pointer;color: #abbbbb;line-height: 33px;font-size: 1em;font-weight: 600;}
+.subject-list label:hover {color: #abbbbb;}
+.subject-list label:after, .subject-list input:checked + label:after {position: absolute;content: '';width: 15px;height: 11px;right: 13px;top: 22px;background: url(../images/arrow_up.png) no-repeat -4px -5px;-webkit-transition: .5s all;-moz-transition: .5s all;transition: .5s all;}
+.subject-list input:checked + label:after {color: #000; transform: rotate(180deg); top: 18px; }
+.subject-list article {
+    position: relative;
+    z-index: 10;
+    height: 0;
+    margin-top: -1px;
+    background:#fff;
+    overflow: hidden;
+    -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+       -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+            transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+}
+.subject-list input:checked ~ article.sub-detail{
+    height: 150px;
+    background-color: #abbbbb; 
+    -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+       -moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+            transition: height 0.5s ease-in-out, box-shadow 0.1s linear;  
+}
+.subject-list article p {
+    line-height: 7px;
+    border-bottom:1px solid #EDEDED;
+    font-size: 0.9em;
+    padding: 20px 31px;
+    color: #FFFFFF;
+    background-color: #788888;
+}
+
+
+/* responsive-design */
+@media(max-width:480px){
+    .banner-text { padding: 1.5em 1em 1.5em 2.5em;}
+    .banner-text h1 { font-size: 1.5em; }
+    .banner-text h2 { font-size: .9em; }
+    .banner-top { padding: .8em; }
+    .sdbk-community-left, .sdbk-community-right { padding: 1.5em 0; }
+    .sdbk-community h2 { font-size: 1.0em; }
+    .sdbk-community p { font-size: .6em; margin-top: .8em; opacity: .8; }
+    .subject {  padding: 2.5em 1.8em 1em; }
+    .subject h2 {font-size: 1.2em;margin-bottom: 1.5em;}
+    .subject-list label { font-size: .9em; }
+    .subject-list label:after, .subject-list input:checked + label:hover:after { top: 21px; }
+}
+@media(max-width:320px){
+    .banner-top {padding: .8em;}
+    .banner-text { padding: 1em .5em 1em 2.2em; }
+    .banner-text h1 { font-size: 1.4em; }
+    .banner-text h2 { font-size: .85em; }
+    .sdbk-community-left, .sdbk-community-right { padding: 1.4em 0; }
+    .sdbk-community h2 { font-size: 1.0em; }
+    .sdbk-community p { font-size: .4em; }
+    .subject { padding: 2.5em 1.4em 1em; }
+    .subject-list div {margin: .8em 0}
+    .subject h2 {font-size: 1em}
+    .subject-list label i { width: 10px; height: 10px; margin: .2em .95em 0 0; }
+    .subject-list label { font-size: .8em; line-height: 22px; }
+    .subject-list label:after, .subject-list input:checked + label:hover:after { top: 16px; right: 4px; width: 12px; height: 7px;  background-position:-5px -5px; }
+    .subject-list article p { font-size: .8em; padding: 20px 25px; }
+    .subject-list input:checked ~ article.sub-detail { height: 148px; }
+    .subject-list span:first-of-type { width: 135px }
+}

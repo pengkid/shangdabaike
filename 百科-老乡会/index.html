@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/js.js"></script>
+    <title>商大老乡会</title>
+</head>
+<body>
+    <header class="banner">
+        <div class="banner_head"></div>
+        <div class="banner_body">
+            <hgroup>
+                <h1>商大老乡广场</h1>
+                <h2>made by shangdabaike</h2>
+            </hgroup>
+        </div>
+    </header>
+    <article class="container">
+        <section class="container_head">
+            <div class="container_head_item" id="container_head_left">老乡热搜榜</div>
+            <div class="container_head_item active" id="container_head_right">老乡查询录</div>
+        </section>
+        <nav class="container_body" id="container_body_1">
+            <h2>热搜榜top5</h2>
+            <ul>
+                <li id="list1">
+                    <a class="list_item" href="#">
+                        <div class="list_left">
+                            <img src="images/banner.jpg"/>
+                        </div>
+                        <div class="list_right">
+                            <h3>黄锦鹏</h3>
+                            <p>广东佛山</p>
+                        </div>
+                    </a>
+                </li>
+                <li id="list2">
+                    <a class="list_item" href="#">
+                        <div class="list_left">
+                            <img src="images/banner.jpg"/>
+                        </div>
+                        <div class="list_right">
+                            <h3>黄锦鹏</h3>
+                            <p>广东佛山</p>
+                        </div>
+                    </a>
+                </li>
+                <li id="list3">
+                    <a class="list_item" href="#">
+                        <div class="list_left">
+                            <img src="images/banner.jpg"/>
+                        </div>
+                        <div class="list_right">
+                            <h3>黄锦鹏</h3>
+                            <p>广东佛山</p>
+                        </div>
+                    </a>
+                </li>
+                <li id="list4">
+                    <a class="list_item" href="#">
+                        <div class="list_left">
+                            <img src="images/banner.jpg"/>
+                        </div>
+                        <div class="list_right">
+                            <h3>黄锦鹏</h3>
+                            <p>广东佛山</p>
+                        </div>
+                    </a>
+                </li>
+                <li id="list5">
+                    <a class="list_item" href="#">
+                        <div class="list_left">
+                            <img src="images/banner.jpg"/>
+                        </div>
+                        <div class="list_right">
+                            <h3>黄锦鹏</h3>
+                            <p>广东佛山</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="container_body" id="container_body_2" style="display: none">
+            <h2>老乡我来啦</h2>
+            <form>
+                <input type="text" name="address" id="address" placeholder="输入家乡地址，如 哈尔滨"/>
+                <input type="button" name="button" id="button" class="btn" value="提交"/>
+            </form>
+            <ul id="res"></ul>
+        </nav>
+    </article>
+    <footer class="copyright">
+        <address>Copyright © 2016 商大百科</address>
+    </footer>
+    <script>
+        var button = document.getElementById("button");
+        var address = document.getElementById("address");
+        var res = document.getElementById("res");
+        button.onclick =  function () {
+            var that = this;
+            var address  = that.getAttribute('value');
+            var options = {
+                url: '接口待定。。', //Daemon偷懒啊！
+                type: "POST",
+                data: { address: address },
+                dataType: "json",
+                success: function (response, xml) {
+                    if(response){
+                        // 后端返回一个JSON数组
+                        for(i=0; i<response.lenght; i++){
+                            var li = document.createElement("li");
+                            var a  = document.createElement("a");
+                            var list_left  = document.createElement("div");
+                            var list_right = document.createElement("div");
+                            var h3  = document.createElement("h3");
+                            var p   = document.createElement("p");
+                            var img = document.createElement("img");    // 好恶心。。一堆createElement
+
+                            li.id = "list"+i;
+                            a.className = "list_item";
+                            a.href = response[i].info;
+                            list_left.className = "list_left";
+                            list_right.className = "list_right";
+                            h3.innerHtml = response[i].name;
+                            p.innerHtml = response[i].address;
+                            img.src = response[i].pic;
+
+                            list_left.appendChild(img);
+                            list_right.appendChild(p);
+                            list_right.insertBefore(h3,p);
+                            a.appendChild(list_right);
+                            a.insertBefore(list_left, list_right);
+                            li.appendChild(a);
+                            res.appendChild(li);
+                        }
+                    }
+                    else{
+                        alert("你是逗比吧！都特么没这个地名！");
+                    }
+                },
+                fail: function (status) {
+                    console.log("err");
+                }
+            } || {};
+            options.type = (options.type || "GET").toUpperCase();
+            options.dataType = options.dataType || "json";
+            var params = formatParams(options.data);
+
+            if (window.XMLHttpRequest) {
+                var xhr = new XMLHttpRequest();
+            } else if(window.ActiveXObject) {
+                var xhr = new ActiveXObject('Microsoft.XMLHTTP');
+            } else {
+                alert("该换手机了。。");
+            }
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    var status = xhr.status;
+                    if (status >= 200 && status < 300) {
+                        options.success && options.success(xhr.responseText, xhr.responseXML);
+                    } else {
+                        options.fail && options.fail(status);
+                    }
+                }
+            }
+
+            if (options.type == "POST") {
+                xhr.open("POST", options.url, true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.send(params);
+            }
+        }
+
+            function formatParams(data) {
+            var arr = [];
+            for (var name in data) {
+                arr.push(encodeURIComponent(name) + "=" + encodeURIComponent(data[name]));
+            }
+            arr.push(("v=" + Math.random()).replace(".",""));
+            return arr.join("&");
+        }
+    </script>
+</body>
+</html>

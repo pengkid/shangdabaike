@@ -1,0 +1,115 @@
+
+#bg-bottom {
+    background: url("../images/bg2.png") no-repeat top center;
+    background-size: 100%;
+}
+
+/* 1 */
+
+#bottom-academy {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid #a6a6a6;
+}
+
+#bottom-academy > .bottom-image {
+    background-color: #42bdbd;
+}
+
+#bottom-academy > .bottom-image:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    background: url("../images/academy-image.png") no-repeat center center;
+    background-size: 100%;
+    width: 3.565vh;
+}
+
+
+/* 2 */
+
+#bottom-grade {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid #a6a6a6;
+}
+
+#bottom-grade > .bottom-image {
+    background-color: #d66d93;
+}
+
+#bottom-grade > .bottom-image:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    background: url("../images/grade-image.png") no-repeat center center;
+    background-size: 100%;
+    width: 3.565vh;
+}
+
+
+
+/* 3 */
+
+
+#bottom-wechat {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid #a6a6a6;
+}
+
+#bottom-wechat > .bottom-image {
+    background-color: #7e4b82;
+}
+
+#bottom-wechat > .bottom-image:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    background: url("../images/wechat-image.png") no-repeat center center;
+    background-size: 100%;
+    width: 3.565vh;
+}
+
+
+/* 4 */
+
+
+#bottom-address {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid #a6a6a6;
+}
+
+#bottom-address > .bottom-image {
+    background-color: #e9cb5f;
+}
+
+#bottom-address > .bottom-image:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    background: url("../images/address-image.png") no-repeat center center;
+    background-size: 100%;
+    width: 3.565vh;
+}

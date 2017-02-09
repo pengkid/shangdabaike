@@ -1,0 +1,105 @@
+
+/* background */
+body {
+    background-size: 100%;
+}
+
+/* logo */
+.logo {
+    position: relative;
+    top: 70px;
+    margin: 0 auto;
+    background: url("../images/logo.jpg") no-repeat center center;
+    background-size: 100%;
+    width: 160px;
+    height: 160px;
+}
+
+/* data */
+.data {
+    margin: 120px auto 0;
+}
+
+.data form * {
+    margin: 0 auto;
+}
+
+.data #xuehao,#mima {
+    font-size: 2.1rem;
+    text-align: center;
+    letter-spacing: .2rem;
+    color: #8e909f;
+    width: 520px;
+    height: 52px;
+    background-color: #e4e5ec;
+    border-left: 1px solid #22242a;
+    border-right: 1px solid #22242a;
+         -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+                 border-radius: 3px;
+}
+
+#xuehao:hover,#mima:hover {
+    background-color: #faffbd;
+}
+
+.data #xuehao {
+    border-top: 1px solid #22242a;
+    border-bottom: 1px solid #c7c9d2;
+}
+
+.data #mima {
+    border-bottom: 1px solid #22242a;
+}
+
+.data #bangding {
+    font-size: 2.1rem;
+    font-weight: 200;
+    letter-spacing: .2rem;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 45px;
+    width: 520px;
+    height: 52px;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    background: -webkit-linear-gradient(top, #98c63a 0%, #84bc3c 50%, #6db13e 100%);
+      background: linear-gradient(to bottom, #98c63a 0%, #84bc3c 50%, #6db13e 100%);
+       background: -moz-linear-gradient(top, #98c63a 0%, #84bc3c 50%, #6db13e 100%);
+    opacity: .8;
+}
+
+.data #bangding:hover {
+    opacity: 1;
+}
+
+.data #chongzhi {
+    font-size: 2.1rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    text-align: center;
+    color: #a6a9bb;
+    margin-top: 12px;
+    width: 520px;
+    height: 52px;
+    background-color: #343640;
+    border: 1px solid #22242a;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    opacity: .8;
+}
+
+.data #chongzhi:hover {
+    opacity: 1;
+}
+
+/* footer */
+.footer {
+    margin: 28px auto 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #5d5f6a;
+}

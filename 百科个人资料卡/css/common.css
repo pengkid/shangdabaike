@@ -1,0 +1,40 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: "Microsoft YaHei UI",Helvetica,sans-serif;
+    font-size: 8.5625vm;
+}
+
+html,body {
+    height: 100%;
+    overflow:  hidden;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.bottom > .bottom-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26%;
+    height: 100%;
+}
+
+.bottom > .bottom-infos {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 74%;
+    height: 100%;
+    padding-top: 4.65vh;
+    text-align: center;
+    font-size: 0.865rem;
+    color: #181818;
+}
+
