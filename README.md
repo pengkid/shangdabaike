@@ -36,7 +36,7 @@
 > **原生JS和CSS绘制时钟：** 操控原生JS绘制的一个时钟，功能上是比较鸡肋的，但主要是为了美观，以及装一下逼而已
 >
 
-<img src="百科课表/images/demo.png" alt="课表界面" width="50%">
+<img src="百科课表/images/demo1.png" alt="课表界面" width="50%">
 
 ---
 
