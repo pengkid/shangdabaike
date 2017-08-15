@@ -1,118 +1,114 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="charset=utf-8" />
-    <meta content="width=device-width initial-scale=0.5 minimum-scale=0.5 maximum-scale=10.0 user-scalable=yes target-densitydpi=device-dpi" name="viewport" />
-    <title>商大百科</title>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1; user-scalable=no;">
+    <title>课表</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-<div id="time">
-    <div id="dial"></div>
-    <div id="hand">
-        <div id="hour"><span></span></div>
-        <div id="min"><span></span></div>
-        <div id="sec"><span></span></div>
-        <div id="center"></div>
-    </div>
-    <div class="gradient"></div>
-</div>
-    <div id="lession">
-        <table cellpadding="0" cellspacing="0" width="100%">
-            <thead>
-                <tr id="day">
-                    <th height="28" width="70">&nbsp;</th>
-                    <th height='28' width='123'>星期一</th>
-                    <th height='28' width='123'>星期二</th>
-                    <th height='28' width='123'>星期三</th>
-                    <th height='28' width='123'>星期四</th>
-                    <th height='28' width='123'>星期五</th>
-                    <th height='28' width='123'>星期六</th>
-                    <th height='28' width='123'>星期日</th>
-                </tr>
-            </thead>
+    <header class="header">
+        <div class="week">
+            <span class="Tappable-inactive" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;">
+                <div class="weekCenter">第13周<!-- $ --></div>
+            </span>
+        </div>
+        <div class="weekTitle">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>7月<!-- $ --></td>
+                        <td>一</td>
+                        <td>二</td>
+                        <td>三</td>
+                        <td>四</td>
+                        <td>五</td>
+                        <td>六</td>
+                        <td>日</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </header>
+    <div class="lesson">
+        <table cellspacing="0">
             <tbody>
-                <!--后端循环-->
                 <tr>
-                    <th height="28" width="70">&nbsp;</th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                </tr>
-                <tr>
-                    <th height="28" width="70">&nbsp;</th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                </tr>
-                <tr>
-                    <th height="28" width="70">&nbsp;</th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                </tr>
-                <tr>
-                    <th height="28" width="70">&nbsp;</th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
-                    <th height='28' width='123'></th>
+                    <td>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>7</p>
+                        <p>8</p>
+                        <p>9</p>
+                        <p>10</p>
+                        <p>11</p>
+                    </td>
+                        
+                    <td>
+                        <span class="Tappable-inactive" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;">
+                            <div class="course" style="top: 0px; height: 99px; background-color: rgb(138, 217, 255);">
+                                <span style="color: rgb(255, 255, 255); -webkit-line-clamp: 6;">Oracle数据库@主0515</span>
+                            </div>
+                        </span>
+                        
+                        <span class="Tappable-inactive" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;">
+                            <div class="course" style="top: 200px; height: 149px; background-color: rgb(138, 217, 255);">
+                                <span style="color: rgb(255, 255, 255); -webkit-line-clamp: 6;">电子商务安全@主0524</span>
+                            </div>
+                        </span>
+                    </td>
+                    
+                    <td>
+                        <span class="Tappable-inactive" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;">
+                            <div class="course" style="top: 0px; height: 149px; background-color: rgb(255, 179, 179);">
+                                <span style="color: rgb(255, 255, 255); -webkit-line-clamp: 6;">JSP技术@主0601</span>
+                            </div>
+                        </span>
+                        <span class="Tappable-inactive" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;">
+                            <div class="course" style="top: 200px; height: 149px; background-color: rgb(255, 179, 179);">
+                                <span style="color: rgb(255, 255, 255); -webkit-line-clamp: 6;">供应链管理@主0515</span>
+                            </div>
+                        </span>
+                    </td>
+                    
+                    <td>
+                        <span class="Tappable-inactive" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;">
+                            <div class="course" style="top: 100px; height: 99px; background-color: rgb(169, 186, 255);">
+                                <span style="color: rgb(255, 255, 255); -webkit-line-clamp: 6;">Oracle数据库@主0415</span>
+                            </div>
+                        </span>
+                        <span class="Tappable-inactive" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;">
+                            <div class="course" style="top: 200px; height: 149px; background-color: rgb(169, 186, 255);">
+                                <span style="color: rgb(255, 255, 255); -webkit-line-clamp: 6;">决策支持系统@主0301</span>
+                            </div>
+                        </span>
+                    </td>
+                    
+                    <td>
+                    </td>
+                    
+                    <td>
+                        <span class="Tappable-inactive" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;">
+                            <div class="course" style="top: 0px; height: 149px; background-color: rgb(255, 179, 179);">
+                                <span style="color: rgb(255, 255, 255); -webkit-line-clamp: 6;">.NET开发技术@主0524</span>
+                            </div>
+                        </span>
+                        <span class="Tappable-inactive" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;">
+                            <div class="course" style="top: 200px; height: 149px; background-color: rgb(255, 179, 179);">
+                                <span style="color: rgb(255, 255, 255); -webkit-line-clamp: 6;">软件工程@主0424</span>
+                            </div>
+                        </span>
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div id="tips">备注:</div>
-    <script type="text/javascript">
-        window.onload=function(){
-            var oDial=document.getElementById('dial');
-            var oHour=document.getElementById('hour');
-            var oMin=document.getElementById('min');
-            var oSec=document.getElementById('sec');
-            
-            toDial(oDial);
-            toTime(oHour,oMin,oSec);
-            setInterval(function(){
-                toTime(oHour,oMin,oSec);
-            },1000)
-        }
-
-        function toTime(oHour,oMin,oSec){
-            var oDate=new Date();
-            var iSec=oDate.getSeconds();
-            var iMin=oDate.getMinutes()+iSec/60;
-            var iHour=(oDate.getHours()%12)+iMin/60;
-            oSec.style.webkitTransform="rotate("+(iSec*360/60)+"deg)";
-            oMin.style.webkitTransform="rotate("+(iMin*360/60)+"deg)";
-            oHour.style.webkitTransform="rotate("+(iHour*360/12)+"deg)";
-            oSec.style.MozTransform="rotate("+(iSec*360/60)+"deg)";
-            oMin.style.MozTransform="rotate("+(iMin*360/60)+"deg)";
-            oHour.style.MozTransform="rotate("+(iHour*360/12)+"deg)";  
-        }
-
-        function toDial(obj){
-            var sHtml="";
-            var iDeg=6;
-            for(var i=0;i<60;i++){
-                sHtml+="<span style='-webkit-transform:rotate("+iDeg*i+"deg)'></span>";
-                sHtml+="<span style='-moz-transform:rotate("+iDeg*i+"deg)'></span>"; 
-            }
-            obj.innerHTML=sHtml;
-        }   
-    </script>
 </body>
 </html>
