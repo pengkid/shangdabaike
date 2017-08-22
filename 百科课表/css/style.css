@@ -1,130 +1,93 @@
+        *{
+            margin: 0;
+            padding: 0;
+            border: none;
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: #868D92;
+            box-sizing: border-box;
+        }
 
-body{
-	margin:5px;
-	padding:0;
-	font-size:100%;
-	background-color: #ffed87;
-}
-th{
-	border:1px solid #fff;
-	text-align:center;
-}
-td{
-	border:1px solid #fff;
-	padding:5px;
-	height:28px;
-	width:123px;
-	vertical-align:top;
-	text-align:center;
-	font: normal 1.0em "微软雅黑";
-	color: #4e4
-}
-#day>th{
-	background-color: #9bbb59;
-	color: #fff;
-	text-align:center;
-	font: bold .8em "微软雅黑";
-	letter-spacing:.5em;
-}
-#day>tr{
-	border: 1px solid #fff;
-	font: normal .75em "微软雅黑","sans-serif";
-	color: #4e4e4e;
-	line-height:.2em;
-	letter-spacing:.1em;
-}
-tr:nth-of-type(2n+1){background-color: #f7f7f7;}
-tr:nth-of-type(2n){background-color: #d8e4bc;}
-#tips{
-	margin:5px;
-	padding-top:15px;
-	font: normal .8em "微软雅黑","sans-serif";
-	color: #4e4e4e;
-	line-height:1.8em;
-}
-#time{
-	width:206px;
-	height:206px;
-	border-radius:100px;
-	margin:100px auto;
-	background:black;
-	position:relative;
-	box-shadow:2px 2px 5px #b2b2b2,2px -2px 5px #b2b2b2,-2px 2px 5px #b2b2b2,-2px -2px 5px #b2b2b2,4px 4px 6px #b87333,4px -4px 6px #b87333,-4px 4px 6px #b87333,-4px -4px 6px #b87333;
-}
-#dial{
-	height:200px;
-	border:3px solid #b87333;
-	border-radius:103px;
-	position:relative;
-}
-#dial span{
-	width:2px;
-	height:6px;
-	background:#b87333;
-	position:absolute;
-	top:0;
-	left:99px;
-	transform-origin:0 100px;
-	-webkit-transform-origin:0 100px;
-}
-#hand{
-	width:12px;
-	height:12px;
-	position:absolute;
-	left:97px;
-	top:97px;
-}
-#hour{
-	width:5px;
-	height:45px;
-	background:#b87333;
-	position:absolute;
-	left:4px;
-	bottom:6px;
-	transform-origin:bottom;
-	-webkit-transform-origin:bottom;
-}
-#min{
-	width:2px;
-	height:60px;
-	background:#b87333;
-	position:absolute;
-	left:5px;
-	bottom:6px;
-	transform-origin:bottom;
-	-webkit-transform-origin:bottom;
-}
-#sec{
-	width:2px;
-	height:75px;
-	background:#b87333;
-	position:absolute;
-	left:5px;
-	bottom:6px;
-	transform-origin:bottom;
-	-webkit-transform-origin:bottom;
-}
-#center{
-	width:12px;
-	height:12px;
-	border-radius:12px;
-	background:#b87333;
-	position:absolute;
-	top:0;
-	left:0;
-}
-#dial span:nth-child(5n+1){
-	height:10px;
-	background:#b87333;
-}
-.gradient{
-	width:206px;
-	height:206px;
-	border-radius:103px;
-	position:absolute;
-	top:0;
-	left:0;
-		background:-webkit-linear-gradient(120deg, transparent, rgba(0,0,255,0.7));
-		background:-o-linear-gradient(120deg, transparent, rgba(0,0,255,0.7));
-		background:linear-gradient(210deg, transparent, rgba(0,0,255,0.7));
-}
+        .lesson{
+            position: relative;
+            margin-top: 127px;
+            overflow: hidden;
+        }
+
+        .lesson table {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .lesson table tbody tr td p{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .lesson table tbody tr td{
+            width: 12.5%;
+            border-right: solid 1px #F9F9F9;
+            overflow: hidden;
+        }
+
+        .lesson .course{
+            position: absolute;
+            width: 12.3%;
+            z-index: 100;
+            padding: 3px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 200;
+            width: 100%;
+            min-height: 125px;
+            background: -webkit-gradient(linear, left 0, right 0, from(#45BEE9), to(#71DDDA)) !important;
+        }
+
+        .header .week .weekCenter{
+            min-width: 16%;
+            max-width: 18%;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 auto;
+            text-align: center;
+            color: #FFF;
+        }
+
+        .header .week{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 120;
+            background: rgba(250, 250, 250, .1);
+            width: 100%;
+            height: 30px;
+            margin-bottom: 5px;
+        }
+
+        .header .weekTitle{
+            width: 100%;
+            height: 25px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .header .weekTitle table{
+            position: absolute;
+            bottom: 0;
+            height: 25px;
+            width: 100%;
+        }
+
+        .header .weekTitle table tbody tr td{
+            width: 12.5%;
+            text-align: center;
+            color: #FFF;
+        }
